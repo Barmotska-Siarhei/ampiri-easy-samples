@@ -6,7 +6,7 @@
 //  All rights reserved.
 //
 
-#import <AmpiriSDK/AmpiriSDK.h>
+#import <AmpiriSDK/Ampiri.h>
 
 @interface MyNativeBannerView : AMPNativeView
 

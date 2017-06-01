@@ -14,10 +14,10 @@ class TableViewVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.adapter = AmpiriSDK.shared().addLocationControl(to: tableView,
+        self.adapter = AmpiriSDK.shared.createStreamAdapter(for: tableView,
                                                              parentViewController: self,
                                                              adUnitId: "7f900c7d-7ce3-4190-8e93-310053e70ca2",
-                                                             templateType: .inFeed,
+                                                             templateType: .list,
                                                              templateCustomization: { templateCustomizationObject in
                                                                 templateCustomizationObject.ampCTABorderWidth = 1
                                                                 templateCustomizationObject.ampCTACornerRadius = 5

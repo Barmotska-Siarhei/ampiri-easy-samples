@@ -8,7 +8,7 @@
 
 #import "TableViewVC.h"
 #import "TableViewCell.h"
-#import <AmpiriSDK/AmpiriSDK.h>
+#import <AmpiriSDK/Ampiri.h>
 
 @interface TableViewVC ()
 
@@ -21,10 +21,10 @@
     [super viewDidLoad];
     
     self.adapter = [[AmpiriSDK sharedSDK]
-                    addLocationControlToTableView: self.tableView
+                    createStreamAdapterForTableView: self.tableView
                     parentViewController: self
                     adUnitId: @"7f900c7d-7ce3-4190-8e93-310053e70ca2"
-                    templateType: AMPNativeAdsTemplateTypeInFeed
+                    templateType: AMPNativeAdsTemplateTypeList
                     templateCustomization: ^(AMPTemplateCustomizationObject
                                              *templateCustomizationObject) {
                         templateCustomizationObject.ampCTABorderWidth = 1;

@@ -12,7 +12,7 @@
 		485105161E5B022A001C3EEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485105141E5B022A001C3EEA /* Main.storyboard */; };
 		485105181E5B022A001C3EEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 485105171E5B022A001C3EEA /* Assets.xcassets */; };
 		4851051B1E5B022A001C3EEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485105191E5B022A001C3EEA /* LaunchScreen.storyboard */; };
-		485105351E5B045E001C3EEA /* FullscreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 485105341E5B045E001C3EEA /* FullscreenVC.m */; };
+		485105351E5B045E001C3EEA /* InterstitialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 485105341E5B045E001C3EEA /* InterstitialVC.m */; };
 		485105381E5B0478001C3EEA /* VideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 485105371E5B0478001C3EEA /* VideoVC.m */; };
 		485105411E5B04D7001C3EEA /* BannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 485105401E5B04D7001C3EEA /* BannerVC.m */; };
 		485105441E5B0BCD001C3EEA /* TableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 485105431E5B0BCD001C3EEA /* TableViewVC.m */; };
@@ -35,8 +35,8 @@
 		485105171E5B022A001C3EEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4851051A1E5B022A001C3EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4851051C1E5B022A001C3EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		485105331E5B045E001C3EEA /* FullscreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullscreenVC.h; sourceTree = "<group>"; };
-		485105341E5B045E001C3EEA /* FullscreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullscreenVC.m; sourceTree = "<group>"; };
+		485105331E5B045E001C3EEA /* InterstitialVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterstitialVC.h; sourceTree = "<group>"; };
+		485105341E5B045E001C3EEA /* InterstitialVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterstitialVC.m; sourceTree = "<group>"; };
 		485105361E5B0478001C3EEA /* VideoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoVC.h; sourceTree = "<group>"; };
 		485105371E5B0478001C3EEA /* VideoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoVC.m; sourceTree = "<group>"; };
 		4851053F1E5B04D7001C3EEA /* BannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerVC.h; sourceTree = "<group>"; };
@@ -95,8 +95,8 @@
 				4851050F1E5B022A001C3EEA /* AppDelegate.m */,
 				4851053F1E5B04D7001C3EEA /* BannerVC.h */,
 				485105401E5B04D7001C3EEA /* BannerVC.m */,
-				485105331E5B045E001C3EEA /* FullscreenVC.h */,
-				485105341E5B045E001C3EEA /* FullscreenVC.m */,
+				485105331E5B045E001C3EEA /* InterstitialVC.h */,
+				485105341E5B045E001C3EEA /* InterstitialVC.m */,
 				485105361E5B0478001C3EEA /* VideoVC.h */,
 				485105371E5B0478001C3EEA /* VideoVC.m */,
 				485105421E5B0BCD001C3EEA /* TableViewVC.h */,
@@ -244,7 +244,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		74E27984D57CC504EE85B0D7 /* [CP] Copy Pods Resources */ = {
@@ -273,7 +273,7 @@
 				485105441E5B0BCD001C3EEA /* TableViewVC.m in Sources */,
 				485105471E5B0BFF001C3EEA /* CollectionViewVC.m in Sources */,
 				4851054D1E5B1D99001C3EEA /* CollectionViewCell.m in Sources */,
-				485105351E5B045E001C3EEA /* FullscreenVC.m in Sources */,
+				485105351E5B045E001C3EEA /* InterstitialVC.m in Sources */,
 				4891554B1E5C70720034DA8C /* MyNativeBannerView.m in Sources */,
 				485105381E5B0478001C3EEA /* VideoVC.m in Sources */,
 				489155501E5C71920034DA8C /* NativeVC.m in Sources */,

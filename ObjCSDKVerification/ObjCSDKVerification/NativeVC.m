@@ -7,7 +7,7 @@
 //
 
 #import "NativeVC.h"
-#import <AmpiriSDK/AmpiriSDK.h>
+#import <AmpiriSDK/Ampiri.h>
 #import "MyNativeBannerView.h"
 
 

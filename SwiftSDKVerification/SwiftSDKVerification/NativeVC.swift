@@ -15,7 +15,7 @@ class NativeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        AmpiriSDK.shared().loadNativeAd(withAdUnitId: "7f900c7d-7ce3-4190-8e93-310053e70ca2",
+        AmpiriSDK.shared.loadNativeAd(withAdUnitId: "7f900c7d-7ce3-4190-8e93-310053e70ca2",
                                         parentViewController: self,
                                         adViewClassForRendering: MyNativeBannerView.self,
                                         success: {[weak self] (adContainer: UIView?) in
@@ -26,7 +26,8 @@ class NativeVC: UIViewController {
 
                                         },
                                         failure: { (error: AMPError?) in
-                                            print("Error : \(error?.localizedDescription)")
+                                            guard let message = error?.localizedDescription else {return}
+                                            print("Error : \(message)")
                                         })
     }
 

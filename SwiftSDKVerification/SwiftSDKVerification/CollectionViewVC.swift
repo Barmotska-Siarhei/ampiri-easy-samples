@@ -18,10 +18,10 @@ class CollectionViewVC: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.adapter = AmpiriSDK.shared().addLocationControl(to: collectionView!,
+        self.adapter = AmpiriSDK.shared.createStreamAdapter(for: collectionView!,
                                                              parentViewController: self,
                                                              adUnitId: "7f900c7d-7ce3-4190-8e93-310053e70ca2",
-                                                             templateType: .inFeed,
+                                                             templateType: .feed,
                                                              delegate: nil,
                                                              templateCustomization: { templateCustomizationObject in
                                                                 templateCustomizationObject.ampCTABorderWidth = 1

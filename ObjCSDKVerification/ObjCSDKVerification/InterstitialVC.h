@@ -1,5 +1,5 @@
 //
-//  FullscreenVC.h
+//  InterstitialVC.h
 //  ObjCSDKVerification
 //
 //  Created by Siarhei Barmotska on 20/02/2017.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FullscreenVC : UIViewController
+@interface InterstitialVC : UIViewController
 
 @end

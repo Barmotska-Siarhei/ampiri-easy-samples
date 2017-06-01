@@ -12,7 +12,7 @@
 		4867A6911E5C314A00927E85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4867A6901E5C314A00927E85 /* Assets.xcassets */; };
 		4867A6941E5C314A00927E85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867A6921E5C314A00927E85 /* LaunchScreen.storyboard */; };
 		4867A6AA1E5C324F00927E85 /* BannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867A6A91E5C324F00927E85 /* BannerVC.swift */; };
-		4867A6AC1E5C338600927E85 /* FullscreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867A6AB1E5C338600927E85 /* FullscreenVC.swift */; };
+		4867A6AC1E5C338600927E85 /* InterstitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867A6AB1E5C338600927E85 /* InterstitialVC.swift */; };
 		4867A6AE1E5C339F00927E85 /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867A6AD1E5C339F00927E85 /* VideoVC.swift */; };
 		4867A6B01E5C33B700927E85 /* TableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867A6AF1E5C33B700927E85 /* TableViewVC.swift */; };
 		4867A6B21E5C33EB00927E85 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867A6B11E5C33EB00927E85 /* MyTableViewCell.swift */; };
@@ -32,7 +32,7 @@
 		4867A6931E5C314A00927E85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4867A6951E5C314A00927E85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4867A6A91E5C324F00927E85 /* BannerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerVC.swift; sourceTree = "<group>"; };
-		4867A6AB1E5C338600927E85 /* FullscreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullscreenVC.swift; sourceTree = "<group>"; };
+		4867A6AB1E5C338600927E85 /* InterstitialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialVC.swift; sourceTree = "<group>"; };
 		4867A6AD1E5C339F00927E85 /* VideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
 		4867A6AF1E5C33B700927E85 /* TableViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewVC.swift; sourceTree = "<group>"; };
 		4867A6B11E5C33EB00927E85 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			children = (
 				4867A6891E5C314A00927E85 /* AppDelegate.swift */,
 				4867A6A91E5C324F00927E85 /* BannerVC.swift */,
-				4867A6AB1E5C338600927E85 /* FullscreenVC.swift */,
+				4867A6AB1E5C338600927E85 /* InterstitialVC.swift */,
 				4867A6AD1E5C339F00927E85 /* VideoVC.swift */,
 				4867A6AF1E5C33B700927E85 /* TableViewVC.swift */,
 				4867A6B11E5C33EB00927E85 /* MyTableViewCell.swift */,
@@ -199,7 +199,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		629FF74D8DACA32E8811534F /* [CP] Copy Pods Resources */ = {
@@ -243,7 +243,7 @@
 				4867A6B41E5C341300927E85 /* CollectionViewVC.swift in Sources */,
 				4867A6B61E5C348C00927E85 /* MyCollectionViewCell.swift in Sources */,
 				4867A6AE1E5C339F00927E85 /* VideoVC.swift in Sources */,
-				4867A6AC1E5C338600927E85 /* FullscreenVC.swift in Sources */,
+				4867A6AC1E5C338600927E85 /* InterstitialVC.swift in Sources */,
 				489155581E5C7E920034DA8C /* MyNativeBannerView.swift in Sources */,
 				4867A6AA1E5C324F00927E85 /* BannerVC.swift in Sources */,
 				4867A6B21E5C33EB00927E85 /* MyTableViewCell.swift in Sources */,

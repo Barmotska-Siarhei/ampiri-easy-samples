@@ -11,18 +11,19 @@ import AmpiriSDK
 
 class VideoVC: UIViewController {
     
-    fileprivate var video: AMPVideoController?
+    fileprivate var video: AMPVideo?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        AmpiriSDK.shared().loadVideo(withAdUnitId: "87f65c4c-f12d-4bb6-96fd-063fe30c4d69",
-                                     success: { [weak self] (video: AMPVideoController?) in
+        AmpiriSDK.shared.loadVideo(withAdUnitId: "87f65c4c-f12d-4bb6-96fd-063fe30c4d69",
+                                     success: { [weak self] (video: AMPVideo?) in
                                         guard let sSelf = self, let myVideo = video else {return}
                                         sSelf.video = myVideo
                                         myVideo.show(from: sSelf)
                                      },
                                      failure: { (error: AMPError?) in
-                                        print("Error : \(error?.localizedDescription)")
+                                        guard let message = error?.localizedDescription else {return}
+                                        print("Error : \(message)")
                                      })
     }
     
